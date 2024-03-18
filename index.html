@@ -18,13 +18,13 @@
     <main>
         <div class="content _container">
             <div class="content_info">
-                <input type="text" placeholder="Введите название задачи">
-                <textarea placeholder="Введите описание задачи"></textarea>
-                <button>Добавить задачу</button>
-                <button>Удалить задачу</button>
+                <input id="taskTitle" type="text" placeholder="Введите название задачи">
+                <textarea id="taskDescription" placeholder="Введите описание задачи"></textarea>
+                <button onclick="createTask()">Добавить задачу</button>
+                <button onclick="deleteTasks()">Удалить задачу</button>
             </div>
             <div class="content_info content_info-slide">
-                <ul>
+                <ul id="taskList">
                     <li>Первая задача</li>
                 </ul>
             </div>

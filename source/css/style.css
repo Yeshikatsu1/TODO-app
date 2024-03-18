@@ -92,6 +92,19 @@ hr {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5edc4;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 /* Обнуление */
 /* Стили шаблона */
 ._container {
@@ -111,9 +124,9 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -135,6 +148,7 @@ hr {
   gap: 14px;
   margin: 0 auto;
   width: 100%;
+  max-width: 542px;
 }
 .content_info input {
   height: 48px;
@@ -142,6 +156,8 @@ hr {
   font-size: 14px;
   padding: 16px;
   width: 100%;
+  border-radius: 8px;
+  border: 1px solid gray;
 }
 .content_info textarea {
   max-width: 580px;
@@ -150,6 +166,8 @@ hr {
   padding: 12px 16px 40px 16px;
   width: 100%;
   resize: none;
+  border-radius: 8px;
+  border: 1px solid gray;
 }
 .content_info button {
   font-size: 14px;
@@ -158,12 +176,11 @@ hr {
   background: #f3efd8;
   border: 0;
   border-radius: 8px;
-  -webkit-transition: 0.2s all ease-out;
-  transition: 0.2s all ease-out;
+  -webkit-transition: 0.1s all ease-out;
+  transition: 0.1s all ease-out;
 }
 .content_info button:hover {
   background: #f5edc4;
-  width: 160px;
 }
 .content_info ul {
   display: -webkit-box;
@@ -176,11 +193,62 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 542px;
+}
+.content_info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 12px;
+  position: relative;
+  width: 98%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+.content_info ul li input[type=checkbox] {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content_info ul li strong {
+  padding-left: 30px;
 }
 
 .content_info-slide {
-  max-height: 306px;
+  max-height: 500px;
   overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .header_body {
+    margin-top: 40px;
+  }
+  .content_info-slide {
+    max-height: 100%;
+    overflow-y: none;
+  }
+  .content_info ul li {
+    width: 100%;
+  }
+}
 /* Стили шаблона */
