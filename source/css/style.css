@@ -224,6 +224,12 @@ hr {
   top: 0;
   left: 0;
 }
+.content_info ul li input[type=text] {
+  margin-bottom: 12px;
+}
+.content_info ul li textarea {
+  margin-bottom: 8px;
+}
 .content_info ul li strong {
   padding-left: 30px;
 }

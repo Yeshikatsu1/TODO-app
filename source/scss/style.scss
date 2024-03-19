@@ -191,16 +191,20 @@ hr {
             width: 98%;
             padding-bottom: 12px;
             border-bottom: 1px solid black;
-
-            input[type='checkbox'] {
+            input[type='checkbox']{
                 width: 21px;
                 height: 21px;
                 position: absolute;
                 top: 0;
                 left: 0;
             }
-
-            strong {
+            input[type='text']{
+                margin-bottom: 12px;
+            }
+            textarea{
+                margin-bottom: 8px;
+            }
+            strong{
                 padding-left: 30px;
             }
         }
@@ -234,6 +238,5 @@ hr {
         }
     }
 }
-
 
 /* Стили шаблона */
