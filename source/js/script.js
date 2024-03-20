@@ -27,6 +27,12 @@ function createTask() { // Функция создания задачи по к�
     document.getElementById("taskDescription").value = "";
 }
 
+function deleteTasks() { // Функция удаления задачи по клику на кнопку
+    state.tasks = state.tasks.filter(task => !state.selectedTaskIds.includes(task.id));
+    state.selectedTaskIds = [];
+    renderTasks(); // Обновляем список задач после удаления задач
+}
+
 function toggleTaskSelection(taskId) { // Функция переключения выбора задач
     if (state.selectedTaskIds.includes(taskId)) {
         state.selectedTaskIds = state.selectedTaskIds.filter(id => id !== taskId);
