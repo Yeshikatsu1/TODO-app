@@ -17,13 +17,18 @@
 
     <main>
         <div class="content _container">
-            <div class="content_info">
+            <div class="content_info content_info-main">
                 <input id="taskTitle" type="text" placeholder="Введите название задачи">
                 <textarea id="taskDescription" placeholder="Введите описание задачи"></textarea>
                 <button onclick="createTask()">Добавить задачу</button>
-                <button onclick="deleteTasks()">Удалить задачу</button>
             </div>
-            <div class="content_info content_info-slide">
+            <div class="content_info content_info-dop">
+                <div class="content_info-buttons">
+                    <button id="viewTasksButton" style="display: none;">Просмотр задач</button>
+                    <button id="createEditTaskButton">Редактирование задач</button>
+                    <button id="deleteTasksButton" onclick="showDeleteTasksButton()">Удалить задачи</button>
+                    <button id="deleteSelectedButton" style="display: none;">Удалить выбранные задачи</button>
+                </div>
                 <ul id="taskList"></ul>
             </div>
         </div>
